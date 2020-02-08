@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,11 +26,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Objects;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Button faculties;
     Button Schedule;
     Button Notifications;
+    Button Track;
 
     public static DrawerLayout mDrawerLayout;
     private Toolbar mToolbar;
@@ -44,11 +47,24 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_drawer);
 
+        NavigationView navigationView =findViewById(R.id.drawer);
+        navigationView.setNavigationItemSelectedListener(this);
+
         ImageView imageView2 =findViewById(R.id.imageView2);
         AnimationDrawable animationDrawable = (AnimationDrawable) imageView2.getDrawable();
         animationDrawable.start();
 
         setupToolbar();
+
+
+        Track = findViewById(R.id.btn_track);
+        Track.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, Track.class));
+
+            }
+        });
 
 
         Notifications = findViewById(R.id.btn_notification);
@@ -90,6 +106,8 @@ public class HomeActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+
+        getSupportActionBar().setTitle("Home");
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
@@ -140,5 +158,31 @@ public class HomeActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
-        }
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        Intent intent;
+
+        if (menuItem.getItemId()==R.id.action_profile)
+        {
+            intent =new Intent(this,Profile.class);
+            startActivity(intent);
+        }
+
+        else if (menuItem.getItemId()==R.id.action_settings_drawer)
+        {
+            intent =new Intent(this,Settings.class);
+            startActivity(intent);
+        }
+
+        else if (menuItem.getItemId()==R.id.action_settings_developers)
+        {
+            intent =new Intent(this,Developers.class);
+            startActivity(intent);
+        }
+
+        return false;
+    }
+}

@@ -30,4 +30,6 @@
     <string name="action_logout">Log Out</string>
     <string name="drawer_open">Open Drawer</string>
     <string name="drawer_close">Close Drawer</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
 </resources>

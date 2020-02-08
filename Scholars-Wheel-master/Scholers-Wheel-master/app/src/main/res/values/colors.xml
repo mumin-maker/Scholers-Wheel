@@ -5,6 +5,11 @@
     <color name="colorAccent">#D81B60</color>
     <color name="blueish_white">#B0BCFD</color>
     <color name="whiter_bluish_white">#CCD4FF</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPurple">#983CFF</color>
+    <color name="colorPurpleT">#64983cff</color>
+    <color name="colorBlue">#2FB4FF</color>
+    <color name="colorBlueT">#642fb4ff</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

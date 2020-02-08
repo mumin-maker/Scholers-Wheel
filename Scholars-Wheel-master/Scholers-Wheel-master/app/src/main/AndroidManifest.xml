@@ -20,7 +20,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Notifications"></activity>
+        <activity android:name=".Track"></activity>
+        <activity android:name=".Developers" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Profile" />
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Notifications" />
         <activity android:name=".Schedule" />
         <activity android:name=".Bus_Schedule" />
         <activity android:name=".FacultyActivity" />
@@ -37,7 +45,8 @@
             android:theme="@style/FullscreenTheme2" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+                  android:theme="@style/AppTheme.FullScreen"/>
 
         <meta-data
             android:name="preloaded_fonts"

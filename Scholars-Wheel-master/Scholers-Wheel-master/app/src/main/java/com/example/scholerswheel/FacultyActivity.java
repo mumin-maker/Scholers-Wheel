@@ -41,36 +41,15 @@ public class FacultyActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
+        getSupportActionBar().setTitle("Faculties");
+
+        //adding back button to the toolbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        // Setup Navigation Drawer Layout
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close) {
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-            }
-
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-            }
-        };
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 
-        mDrawerLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                mDrawerToggle.syncState();
-            }
-        });
+
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -80,16 +59,12 @@ public class FacultyActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
 
-            case R.id.action_logout:
-                firebaseAuth.signOut();
-                startActivity(new Intent(FacultyActivity.this, LoginActivity.class));
-                finish();
-                break;
-            default:
-                break;
+        if(item.getItemId()==android.R.id.home)
+        {
+            this.finish();
         }
+
         return super.onOptionsItemSelected(item);
     }
 }

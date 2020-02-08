@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            android:visibility="visible">
+            android:visibility="visible"
+            android:background="@drawable/s1">
 
             <LinearLayout
                 android:id="@+id/fullscreen_content_controls"
@@ -64,7 +65,7 @@
                 android:textColor="#1F6B8B"
                 android:textSize="50sp"
                 android:textStyle="bold"
-                app:srcCompat="@drawable/school_bus"/>
+                app:srcCompat="@drawable/sp1"/>
 
             <TextView
                 android:id="@+id/textView6"
@@ -72,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bungee_shade"
                 android:text="Welcome To Scholarshome Bus Tracker"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/blueish_white"
                 android:textAlignment="center"
                 android:textSize="40sp" />
         </FrameLayout>

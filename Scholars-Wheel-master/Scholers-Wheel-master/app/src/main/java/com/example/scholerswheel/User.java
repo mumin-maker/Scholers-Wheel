@@ -3,6 +3,7 @@ package com.example.scholerswheel;
 import java.io.Serializable;
 
 public class User implements Serializable {
+    public String propic;
     private String name;
     private String phone;
     private String email;

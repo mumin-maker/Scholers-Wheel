@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="@drawable/gradient">
+    android:background="@drawable/header_login">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -23,10 +23,11 @@
     <EditText
         android:id="@+id/name"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/colorPurpleT"
         android:drawableLeft="@drawable/ic_action_users"
         android:ems="10"
         android:hint="Full Name"
@@ -44,7 +45,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="8dp"
-
+        android:background="@color/colorPurpleT"
         android:drawableLeft="@drawable/ic_action_phone"
         android:ems="10"
         android:hint="Phone Number"
@@ -62,6 +63,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/colorPurpleT"
         android:drawableLeft="@drawable/ic_action_email"
         android:ems="10"
         android:hint="Email"
@@ -79,6 +81,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/colorPurpleT"
         android:drawableLeft="@drawable/ic_action_profile"
         android:ems="10"
         android:hint=" User Details"
@@ -97,6 +100,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/colorPurpleT"
         android:drawableLeft="@drawable/ic_action_lock"
         android:ems="10"
         android:hint="Password"
@@ -123,13 +127,15 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/s1">
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
                 android:text="Sign Up" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -141,7 +147,7 @@
         android:layout_marginTop="16dp"
         android:onClick="goToLogin"
         android:text="Already have an account? Sign in Here"
-        android:textColor="@color/blueish_white"
+        android:textColor="@color/black_overlay"
         android:textColorHint="@color/whiter_bluish_white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

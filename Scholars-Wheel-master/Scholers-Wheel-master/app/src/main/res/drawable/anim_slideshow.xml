@@ -3,19 +3,19 @@
 
     <item
         android:duration="4000"
+        android:drawable="@drawable/h1"/>
+
+    <item
+        android:duration="4000"
         android:drawable="@drawable/scholars_home"/>
 
     <item
         android:duration="4000"
-        android:drawable="@drawable/j2"/>
+        android:drawable="@drawable/h2"/>
 
     <item
         android:duration="4000"
-        android:drawable="@drawable/ima4"/>
-
-    <item
-        android:duration="4000"
-        android:drawable="@drawable/j1"/>
+        android:drawable="@drawable/h3"/>
 
     <item
         android:duration="4000"

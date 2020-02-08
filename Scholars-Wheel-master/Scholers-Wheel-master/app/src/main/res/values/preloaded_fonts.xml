@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/almendra</item>
+        <item>@font/architects_daughter</item>
         <item>@font/bangers</item>
         <item>@font/berkshire_swash</item>
+        <item>@font/black_ops_one</item>
         <item>@font/bungee_shade</item>
+        <item>@font/crimson_text</item>
+        <item>@font/hanalei_fill</item>
+        <item>@font/ruge_boogie</item>
+        <item>@font/vast_shadow</item>
     </array>
 </resources>
